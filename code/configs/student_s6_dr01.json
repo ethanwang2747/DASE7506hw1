@@ -1,0 +1,13 @@
+{
+  "vocab": 2048,
+  "width": 320,
+  "heads": 5,
+  "depth": 6,
+  "context": 256,
+  "norm": "rmsnorm",
+  "mlp": "swiglu",
+  "qk_norm": true,
+  "tie": true,
+  "bias": false,
+  "dropout": 0.1
+}

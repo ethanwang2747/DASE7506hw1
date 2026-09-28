@@ -1,0 +1,3 @@
+env -u PYTHONPATH .venv/bin/python train.py --implementation student --config configs/student_s7_dr005.json --device cuda --precision fp32 --steps 28800 --seed 42 --eval-every 1200 --save-every 1200 --optimizer muon --muon-lr 0.03 --ema-decay 0.9995 --weight-decay 0.05 --distill-checkpoint runs/server/s4-ba2x-s17/checkpoint.pt,runs/server/s4-ba2x-s42/checkpoint.pt --distill-T 4.0 --distill-alpha 0.7 --batch-size 32 --run-dir runs/server/s6-gen3dr005-s42
+# born-again 教师链（血统）: s4-ba2x-* 的教师是 s2-combo-*；s2-combo-* 的教师是 runs/phase3/teacher-s17 + runs/phase5/teacher-big-s17
+# 在 5090 服务器上的实际 run 目录：runs/server/s6-gen3dr005-s42（本文件随其 checkpoint 副本分发）

@@ -1,0 +1,16 @@
+# Local environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Training outputs and checkpoints: not tracked here, the frozen checkpoint ships separately
+runs/
+*.pt
+*.npy
+checkpoints/
+
+# macOS
+.DS_Store
+__MACOSX/
+._*
